@@ -1,0 +1,46 @@
+
+
+body{
+    background-color: cornsilk;
+    color:black;
+    line-height: 1;
+    padding: 20px;
+}
+
+
+
+.h1{
+    text-align: center;
+    color:black
+    
+
+}
+.h3{
+    text-align: center;
+    color: black;
+}
+.header {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+.header1 {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+.header2 {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+.header3 {
+            background: linear-gradient(135deg, #2c3e50, #4a6491);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
