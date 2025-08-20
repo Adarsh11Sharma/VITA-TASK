@@ -5,9 +5,13 @@ public class String1{
 
        String str=sc.next();
        String str1=sc.nextLine();
-       Char ch=sc.next().charAt(0);
+       char ch=sc.next().charAt(0);
 
-       
+       System.out.println(str);
+       System.out.println(str1);
+       System.out.println(ch);
+
+
 
     }
 
