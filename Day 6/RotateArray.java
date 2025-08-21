@@ -18,6 +18,30 @@ public class RotateArray {
         }
     }
 
+    public static void RotateArray1(int arr[],int k){
+    int n=arr.length;
+    int []res=new int[n];
+    
+    k=k%n;
+
+for(int i=0;i<n;i++){
+   if(i<k){
+    res[i]=arr[n+i-k];
+   } 
+   else{
+    res[i]=arr[i-k];
+   }
+
+    
+}
+for (int a : res) {
+            System.out.print(a + " ");
+        }
+
+
+}
+
+
     public static void reverse(int[] arr, int start, int end) {
         // Use two-pointer technique to reverse the subarray
         while (start < end) {
@@ -48,7 +72,7 @@ public class RotateArray {
         int k = sc.nextInt();
         
         // Rotate and print the array
-        rotateArray(arr, k);
+        RotateArray1(arr, k);
         
         sc.close();
     }
