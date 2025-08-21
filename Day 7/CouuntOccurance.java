@@ -4,14 +4,23 @@ public class CouuntOccurance{
 
  public static void CouuntOccurance(String str, char ch){
 
-char str1[]=str.toCharArray();
-int count=0;
-int n=str1.length;
+// char str1[]=str.toCharArray();
+// int count=0;
+// int n=str1.length;
 
- for(int i=0;i<n;i++){
-if(str1[i]==ch){
-    count++;
-}
+//  for(int i=0;i<n;i++){
+// if(str1[i]==ch){
+//     count++;
+// }
+ 
+
+int count=0;
+str=str.toLowerCase();
+
+ for(int i=0;i<str.length();i++){
+    if(str.charAt(i)==ch){
+        count++;
+    }
  }
 
 System.out.println(count);
