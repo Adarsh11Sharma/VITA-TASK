@@ -1,59 +1,55 @@
-
-// 1234567  k=3 right
-
 import java.util.*;
-public class RotateArray{
 
+public class RotateArray {
 
-public static void RotateArray(int []arr,int k){
+    public static void rotateArray(int[] arr, int k) {
+        int n = arr.length;
+        k = k % n; // Handle cases where k > n
+        if (k == 0) return; // No rotation needed
+        
+        // Three-step reversal for right rotation
+        reverse(arr, 0, n - 1);    // Reverse entire array
+        reverse(arr, 0, k - 1);    // Reverse first k elements
+        reverse(arr, k, n - 1);    // Reverse remaining elements
 
-int n=arr.length;
-k=k%n;
-    Reverse(arr, 0, n-1);
-    Reverse(arr, 0, k-1);
-    Reverse(arr, k, n-1);
-
-
-
-    for(int a:arr){
-        System.out.print(a+" ");
+        // Print the rotated array
+        for (int a : arr) {
+            System.out.print(a + " ");
+        }
     }
 
-
-}
-
-
-public static int[] Reverse(int []arr, int start,int end){
-//    int reversearray[]=new int[arr.length];
-   int temp;
-   int l=arr.length-1;
-
-   for(int i=start;i<=end/2;i++){
-      temp=arr[i];
-      arr[i]=arr[l];
-      arr[l]=temp;
-      l--;
-   }
-   
-//    for(int a:arr){
-//     System.out.print(a+" ");
-//    }
-   
-    return arr;
-
-}
-public static void main(String[] args) {
-    Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    int arr[]=new int[n];
-    int k=sc.nextInt();
-
-    for(int i=0;i<n;i++){
-        arr[i]=sc.nextInt();
-
+    public static void reverse(int[] arr, int start, int end) {
+        // Use two-pointer technique to reverse the subarray
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
+        }
     }
 
-   RotateArray(arr ,k);
-//    Reverse(arr, 0, n-1);
-}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Read array size
+        System.out.print("Enter array size: ");
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        
+        // Read array elements
+        System.out.print("Enter array elements: ");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+        
+        // Read rotation count
+        System.out.print("Enter rotation count (k): ");
+        int k = sc.nextInt();
+        
+        // Rotate and print the array
+        rotateArray(arr, k);
+        
+        sc.close();
+    }
 }
