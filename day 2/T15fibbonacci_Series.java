@@ -6,7 +6,7 @@ public class T15fibbonacci_Series {
 		
 		Scanner sc=new Scanner(System.in);
 		 int t=sc.nextInt();
-		 int a =0,b=1;
+		 int a =0,b=1,z;
 		 
 		 if(t==0) {
 			 System.out.println("invalid number");
