@@ -13,6 +13,10 @@ class WindowsUIComponentCreator extends UIComponentCreator
 		System.out.println ("create component as per Windows platform");
 
 	}
+
+    void windowComponent(){
+        System.out.println("seconnd function of the window");
+    }
 }
 class MacUIComponentCreator extends UIComponentCreator
 {
@@ -27,6 +31,10 @@ public class AbstuctDemo
 	{
 		static void perform(UIComponentCreator ref)
 		{
+            if(ref instanceof WindowsUIComponentCreator){
+                 WindowsUIComponentCreator temp=(WindowsUIComponentCreator)ref;
+                 temp.windowComponent();
+            }
 			ref.createComponent();
 			ref.showComponent();
 		}
