@@ -31,7 +31,7 @@ class DatabaseStorage implements Storage
 	}
 	public void display()
 	{	
-        int s;
+        
 		System.out.println("display from Database");
 	}
 }
