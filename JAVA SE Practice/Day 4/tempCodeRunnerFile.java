@@ -1,1 +1,1 @@
-ref.showComponent();
+ObjectDemo6
