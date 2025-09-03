@@ -1,1 +1,1 @@
-ObjectDemo6
+ref.print();
